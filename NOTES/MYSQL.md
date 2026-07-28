@@ -210,3 +210,15 @@ have to complete sql 50 leetcode anyhow
 sql pocket guide
 dense_rank
 read committed vs repeatable read
+
+# 28 july 2026
+Database Transaction: 
+A transaction is a sequence of one or more SQL statements that are executed as a single unit of work. It ensures data integrity and consistency by making sure that either all operations are completed successfully or none are applied.
+mysql:
+START TRANSACTION;
+--
+COMMIT;
+postgres:
+BEGIN;
+--
+COMMIT;
