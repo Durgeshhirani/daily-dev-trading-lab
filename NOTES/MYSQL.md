@@ -203,3 +203,10 @@ SELECT
 FROM SequencedRows
 ORDER BY id;
 
+# 23 july 2026
+have to complete sql 50 leetcode anyhow
+
+# 27 july 2026
+sql pocket guide
+dense_rank
+read committed vs repeatable read

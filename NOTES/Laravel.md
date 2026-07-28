@@ -184,5 +184,4 @@ php artisan migrate --database=crm
 in migration before up() protected $connection = 'crm';
 
 
- 
 

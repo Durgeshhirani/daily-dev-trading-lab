@@ -29,6 +29,14 @@ target confidence level 80%
 6. AI: 0%
 7. MySQL: 20%
 
+# 27 july 2026: confidence level:
+1. PHP: 10%
+2. JS/TS: 10%
+3. Laravel: 10%
+4. NodeJS: 0%
+5. React: 0%
+6. AI: 0%
+7. MySQL: 50%
 
 
 
