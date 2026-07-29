@@ -56,6 +56,6 @@ class FireshipController extends Controller
 
     public function fireship()
     {
-        return response("fireship", 200);
+        return response('fireship', 200);
     }
 }

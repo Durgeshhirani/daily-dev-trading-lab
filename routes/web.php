@@ -9,7 +9,7 @@ Route::inertia('/', 'welcome')->name('home');
 Route::inertia('dashboard', 'dashboard')->name('dashboard');
 // });
 
-Route::get('/runphp', [phpController::class, 'runphp']);
+Route::get('/runphp', [phpController::class, 'funphp']);
 
 Route::get('/welcome', function () {
     $count = 0;
@@ -17,9 +17,10 @@ Route::get('/welcome', function () {
     {
         global $count;
         $count++;
-    };
+    }
+
     // $increase = ($count) => $count +1;
     return view('welcome', ['count' => $count]);
 });
 
-require __DIR__ . '/settings.php';
+require __DIR__.'/settings.php';

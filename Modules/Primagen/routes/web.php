@@ -7,7 +7,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('primagens', PrimagenController::class)->names('primagen');
 });
 
-
 Route::get('/primagen', function () {
-    return response("primagen", 200);
+    return response('primagen', 200);
 });

@@ -2,8 +2,9 @@
 
 namespace Modules\Primagen\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
 // use Modules\Primagen\Database\Factories\PrimagenFactory;
 
 class Primagen extends Model

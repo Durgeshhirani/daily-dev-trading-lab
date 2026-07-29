@@ -39,3 +39,22 @@ prototype is like class also
 # 24 june 2026
 
 # 2 july 2026
+
+# Install a package for production (dependencies)
+npm install <package>
+
+# Install all dependencies from package.json (production + dev)
+npm install
+
+# Install only production dependencies
+npm install --omit=dev
+# (older npm versions)
+npm install --production
+
+# Install a package as a development dependency (devDependencies)
+npm install --save-dev <package>
+# or
+npm i -D <package>
+
+# Install all dependencies including devDependencies
+npm install

@@ -162,7 +162,7 @@ round((100*5 + 15*20)/115 , 2)
 # 21 july 2026
 https://medium.com/learning-sql/sql-window-function-visualized-fff1927f00f2
 https://dataschool.com/how-to-teach-people-sql/how-window-functions-work/ 
-Window functions
+Window functions: (OVER, PARTISAN BY, ORDER BY)
 sql window functions allow calc across set of rows that are related to current row.
 window functions 2 types: aggregate and ranking.
 
