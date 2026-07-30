@@ -222,3 +222,42 @@ postgres:
 BEGIN;
 --
 COMMIT;
+
+# 30 july 2026
+
+# Database for mere mortals
+- Most problems that surface in a database fall into two categories: application utilization problems and data problems.
+- Focus on the concept or technique being presented and its intended results, not on the example used to illustrate it.
+- a database is an organized collection of data used for the purpose of modeling some type of orga-
+nization or organizational process.
+- The two types of databases in database management are operational
+databases and analytical databases.
+- operational database: dynamic data, online transaction processing oltp. real time data and constant changes
+- operational database: static data, online analytical processing olap. historical data for analysis
+- A relational database management system (RDBMS) is a software appli-
+cation program you use to create, maintain, modify, and manipulate a relational database. (inclulde IBM DB2, IBM Informix, Microsoft Access, Microsoft SQL Server, MySQL, Oracle RDBMS, PostgreSQL, SAP SQL Anywhere, SAP Sybase ASE, and SQLite.)
+- Normalization is the process of decomposing large tables into smaller
+ones in order to eliminate redundant data and duplicate data and
+avoid problems with inserting, updating, or deleting data.
+- A normal form is a specific set of rules that can be used to
+test a table structure to ensure that it is sound and free of problems.
+There are a number of normal forms, and each one is used to test for
+a particular set of problems. The normal forms currently in use are
+First Normal Form, Second Normal Form, Third Normal Form, Fourth
+Normal Form, Fifth Normal Form, Sixth Normal Form, Boyce-Codd
+Normal Form, and Domain/Key Normal Form.
+- Data is what you store; information is what you retrieve.
+- an index has absolutely nothing to do with the logical database structure!
+- keys are logical structures you use to identify records within a table, and indexes are physical structures you use to optimize data processing.
+- relationships: one to one, one to many, many to many
+
+| Join              | Returns                        |
+| ----------------- | ------------------------------ |
+| `INNER JOIN`      | Only matching rows             |
+| `LEFT JOIN`       | All left rows + matching right |
+| `RIGHT JOIN`      | All right rows + matching left |
+| `FULL OUTER JOIN` | All rows from both tables      |
+| `CROSS JOIN`      | Every possible combination     |
+| `SELF JOIN`       | A table joined with itself     |
+
+- Data integrity refers to the validity, consistency, and accuracy of the data in a database. I cannot overstate the fact that the level of accuracy of the information you retrieve from the database is in direct proportion to the level of data integrity you impose upon the database.
