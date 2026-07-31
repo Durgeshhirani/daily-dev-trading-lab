@@ -261,3 +261,31 @@ Normal Form, and Domain/Key Normal Form.
 | `SELF JOIN`       | A table joined with itself     |
 
 - Data integrity refers to the validity, consistency, and accuracy of the data in a database. I cannot overstate the fact that the level of accuracy of the information you retrieve from the database is in direct proportion to the level of data integrity you impose upon the database.
+
+- table types: data table, linking table, subset table, validation table
+- Your goal as the database architect is to make certain that it has only an absolute minimum amount of redundant data.
+- 
+
+adding foreign key
+ALTER TABLE `employees` ADD CONSTRAINT `foreign_res_id_responsibilities` FOREIGN KEY (`res_id`) REFERENCES `responsibilities`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+CREATE TABLE `sql_practice`.`employees` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(190) NOT NULL,
+    `email` VARCHAR(256) NOT NULL,
+    `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `res_id` INT UNSIGNED NOT NULL,
+
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `email_unique` (`email`),
+
+    CONSTRAINT `fk_employee_resource`
+        FOREIGN KEY (`res_id`)
+        REFERENCES `resources`(`id`)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+) ENGINE=InnoDB;
+
+- keys: candidate, primary, foreign and non-keys
+- Seniority is not a rank. It is the accumulated memory of every way you have personally made a mess.
+- The scary moment is not when a senior person cannot find the bug. It is the first time they look straight at it and feel nothing
