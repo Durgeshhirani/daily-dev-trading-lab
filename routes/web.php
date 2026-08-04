@@ -1,7 +1,11 @@
 <?php
 
+use App\Http\Controllers\MyController69;
 use App\Http\Controllers\phpController;
 use Illuminate\Support\Facades\Route;
+
+// testing error
+Route::get('/test', [MyController69::class, 'test']);
 
 Route::inertia('/', 'welcome')->name('home');
 
@@ -23,4 +27,4 @@ Route::get('/welcome', function () {
     return view('welcome', ['count' => $count]);
 });
 
-require __DIR__.'/settings.php';
+require __DIR__ . '/settings.php';

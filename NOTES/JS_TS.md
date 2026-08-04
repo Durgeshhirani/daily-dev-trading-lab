@@ -58,3 +58,7 @@ npm i -D <package>
 
 # Install all dependencies including devDependencies
 npm install
+
+
+# 3 aug 2026
+iife, closures

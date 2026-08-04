@@ -162,6 +162,13 @@ Focus on practical + quant + psychology.
 
 # MySQL Topics
 
+path of sql i choosen 
+1. w3schools sql exercises
+2. sql-practice 55 questions
+3. leetcode sql 50 questions
+here we are
+4. sql in real life practice
+
 1. Indexing
 2. Query optimization
 3. Explain analyze
