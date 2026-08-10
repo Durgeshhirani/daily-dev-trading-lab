@@ -7,6 +7,11 @@ https://www.geeksforgeeks.org/sql/sql-interview-questions/
 https://skphd.medium.com/advanced-sql-interview-questions-and-answers-307a5333d02e
 https://datavidhya.com/blog/sql-data-engineering-interview-questions/
 
+https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver17
+
+https://callihandata.com/blog/
+
+
 # 11 june 2026
 
 ## indexing
@@ -289,3 +294,54 @@ CREATE TABLE `sql_practice`.`employees` (
 - keys: candidate, primary, foreign and non-keys
 - Seniority is not a rank. It is the accumulated memory of every way you have personally made a mess.
 - The scary moment is not when a senior person cannot find the bug. It is the first time they look straight at it and feel nothing
+
+# 10 aug 2026
+update users set name=REPLACE(name,'abc', 'xyz');
+SQL → Data Modeling → Indexing → Query Optimization → Transactions/Isolation → Locking → Replication → Caching → Partitioning → Sharding → Distributed Databases → Database Architecture
+
+### Read committed vs Repeatable read
+https://www.geeksforgeeks.org/sql/dbms-dirty-read-in-sql/
+READ COMMITTED means:
+You cannot read data that another transaction has not committed yet.But once the other transaction commits, your next read can see the new value.
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+BEGIN TRANSACTION;
+Read
+ ↓
+Another transaction commits change
+ ↓
+Read again
+ ↓
+NEW VALUE
+
+REPEATABLE READ says:
+If your transaction has read a row, another transaction cannot change that row in a way that makes your repeated read return a different value during your transaction.
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+BEGIN TRANSACTION;
+Read
+ ↓
+Another transaction tries to change row
+ ↓
+Transaction protects previously read row
+ ↓
+Read again
+ ↓
+SAME VALUE
+
+- A Dirty Read in SQL occurs when a transaction reads data that has been modified by another transaction, but not yet committed. In other words, a transaction reads uncommitted data from another transaction, which can lead to incorrect or inconsistent results.A dirty read is a situation in which a transaction can read uncommitted changes from
+other transactions.
+- A dirty write is a situation in which one of the transactions takes an uncommitted value (i.e., dirty read), modifies it, and saves it. In other words, when transaction results are based on the values that have never been committed.
+- A phantom read is when a transaction queries the same set of rows twice and receives different results. It is similar to a nonrepeatable read, but holds for range queries.
+https://www.sqlshack.com/dirty-reads-and-the-read-uncommitted-isolation-level/
+
+
+@RadhaGupta-b4q
+1 year ago
+4:00- requirements for sql installation 
+5:11- db refresh activity on always on db
+7:10- migration -side by side and inplace upgradation 
+8:00 - side by side migration process
+11:10 - how to take backup and restore large db
+12:20 - create login and grant access on always on db
+14:35  - automatic shedding 
+cost threshold parallelism db
+

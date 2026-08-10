@@ -47,7 +47,7 @@ target confidence level 80%
 
 
 
-
+https://remotejobs.victorytuitions.in/
 
 
 
@@ -266,3 +266,27 @@ curl 'https://www.aljazeera.com/graphql?wp-site=aje&operationName=ArchipelagoBre
 
 
 elastic search pending
+
+https://learn.microsoft.com/en-us/
+
+| Feature                     | Monolith          | Microservices         | Serverless                   |
+| --------------------------- | ----------------- | --------------------- | ---------------------------- |
+| Deployment                  | One application   | Many services         | Functions/services           |
+| Infrastructure              | You manage        | You manage            | Provider manages much of it  |
+| Scaling                     | Whole app         | Per service           | Automatic/function-level     |
+| Complexity                  | Low               | High                  | Medium–High                  |
+| Development                 | Easy              | Difficult             | Medium                       |
+| Debugging                   | Easy              | Difficult             | Medium–Difficult             |
+| Deployment                  | Simple            | Complex               | Usually simple               |
+| Database                    | Usually shared    | Usually separate      | Managed DB commonly          |
+| Communication               | Function calls    | HTTP/events           | HTTP/events                  |
+| Startup latency             | Low               | Low                   | Potential cold start         |
+| Long-running processes      | Excellent         | Excellent             | Usually poor fit             |
+| WebSockets                  | Excellent         | Excellent             | Depends on platform          |
+| Cost at low traffic         | Server cost       | Infrastructure cost   | Often excellent              |
+| Cost at sustained high load | Predictable       | Predictable           | Can become expensive         |
+| Independent scaling         | No                | Yes                   | Yes                          |
+| Technology freedom          | Medium            | Very high             | Medium                       |
+| Operational burden          | Low               | High                  | Low–Medium                   |
+| Vendor lock-in              | Low               | Low–Medium            | High                         |
+| Best for                    | Most applications | Large/complex domains | Event-driven/spiky workloads |

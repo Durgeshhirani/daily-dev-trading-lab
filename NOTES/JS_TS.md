@@ -62,3 +62,13 @@ npm install
 
 # 3 aug 2026
 iife, closures
+
+# 10 aug 2026
+Code coverage:
+1. Function coverage
+2. Line coverage
+3. Branch coverage
+4. Statement coverage
+https://web.dev/articles/ta-code-coverage
+
+Testing:

@@ -146,5 +146,21 @@ seller info: only include what's there, and send list of things not there
 transit insurance: admin panel page also with email
 seller info gst verify: once a month or 3 month update records of all active user at a time and don't call apis on user 
 
+# 10 aug 2026
+https://github.com/phpdocumentor/phpdocumentor
+https://github.com/krakjoe/pcov
+
+local -> development server -> staging server -> production server
+https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
+https://github.com/coollabsio/coolify/blob/v4.x/scripts/install.sh
+
+code coverage tool:
+- Java: Atlassian Clover, Cobertura, JaCoCo
+- Javascript: istanbul
+- PHP: PHPUnit
+- Python: Coverage.py
+- Ruby: SimpleCov
+
+
 
 
