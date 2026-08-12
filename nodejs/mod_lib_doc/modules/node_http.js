@@ -206,6 +206,11 @@ process.on("SIGTERM", () => {
 //
 // const stream = fs.createReadStream("./large-file.txt");
 // stream.pipe(res);
+// For downloading instead of streaming:
+// res.setHeader(
+//     'Content-Disposition',
+//     'attachment; filename="all_libs.md"'
+// );
 
 
 // ============================================================
