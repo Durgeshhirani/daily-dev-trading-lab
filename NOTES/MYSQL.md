@@ -266,10 +266,9 @@ Normal Form, and Domain/Key Normal Form.
 | `SELF JOIN`       | A table joined with itself     |
 
 - Data integrity refers to the validity, consistency, and accuracy of the data in a database. I cannot overstate the fact that the level of accuracy of the information you retrieve from the database is in direct proportion to the level of data integrity you impose upon the database.
-
 - table types: data table, linking table, subset table, validation table
 - Your goal as the database architect is to make certain that it has only an absolute minimum amount of redundant data.
-- 
+- Do not adopt the current database structure as the basis for the new database structure.
 
 adding foreign key
 ALTER TABLE `employees` ADD CONSTRAINT `foreign_res_id_responsibilities` FOREIGN KEY (`res_id`) REFERENCES `responsibilities`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
@@ -345,3 +344,8 @@ https://www.sqlshack.com/dirty-reads-and-the-read-uncommitted-isolation-level/
 14:35  - automatic shedding 
 cost threshold parallelism db
 
+
+
+Database internals
+
+SQL → Database Internals → Node.js → System Design → Distributed Systems → Production/Architecture
