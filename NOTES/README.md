@@ -290,3 +290,33 @@ https://learn.microsoft.com/en-us/
 | Operational burden          | Low               | High                  | Low–Medium                   |
 | Vendor lock-in              | Low               | Low–Medium            | High                         |
 | Best for                    | Most applications | Large/complex domains | Event-driven/spiky workloads |
+
+
+ngrok, zrok:
+zrok enable nYO3u2l8mZPf
+zrok share public --backend-mode web .1
+
+
+                 ┌──────────────┐
+                 │ Requirement  │
+                 └──────┬───────┘
+                        ↓
+                Build manually
+                        ↓
+                  Get stuck
+                        ↓
+              Debug / documentation
+                        ↓
+                   Complete it
+                        ↓
+                  Read OSS code
+                        ↓
+                Compare approaches
+                        ↓
+                Improve your code
+                        ↓
+                 Convert to TS
+                        ↓
+                 Convert to Nest
+                        ↓
+              Convert DB to PostgreSQL

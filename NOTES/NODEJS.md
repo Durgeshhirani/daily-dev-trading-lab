@@ -369,6 +369,9 @@ async:
 6. setImmediate
 7. process.nextTick
 
+async means the function always returns a Promise and allows await to be used inside it. It does not mean the function runs in a separate process or thread.
+
+await pauses the execution of that particular async function until the Promise settles, then continues with the result. It does not block the Node.js event loop or the entire application.
 
 
 # 2 july 2026
@@ -449,3 +452,66 @@ emitter.removeAllListeners("start",() => {});
 emitter.emit("start", arguments);
 emitter.eventNames();
 emitter.once("start, () => {});
+
+# 12 aug 2026
+### Node modules:
+1. node:http (imp)
+2. node:fs (imp)
+3. node:path (imp)
+4. node:crypto (imp)
+5. node:events (imp)
+6. node:stream (imp)
+7. node:buffer
+8. node:url
+9. node:os
+10. node:child_process
+11. node:worker_threads
+12. node:process (imp)
+13. node:util
+
+
+### libraries:
+1. express (imp)
+2. fastify (imp)
+3. typescript, -D ts-node (imp)
+4. nestjs (imp)
+| Package                    | Purpose                           |
+| -------------------------- | --------------------------------- |
+| `@nestjs/common`           | Controllers, decorators, services |
+| `@nestjs/core`             | Nest application                  |
+| `@nestjs/platform-express` | Express adapter                   |
+| `@nestjs/platform-fastify` | Fastify adapter                   |
+| `@nestjs/config`           | Environment configuration         |
+| `@nestjs/jwt`              | JWT                               |
+| `@nestjs/passport`         | Authentication                    |
+| `@nestjs/swagger`          | OpenAPI/Swagger                   |
+| `@nestjs/typeorm`          | TypeORM integration               |
+| `@nestjs/schedule`         | Cron/scheduled jobs               |
+| `@nestjs/bullmq`           | Queues                            |
+| `@nestjs/throttler`        | Rate limiting                     |
+5. pg (imp)
+6. prisma @prisma/client (imp)
+7. typeorm (imp)
+9. jsonwebtoken (imp)
+10. bcrypt/bcryptjs (imp)
+11. helmet
+12. cors (imp)
+13. express-rate-limit (imp)
+14. zod (imp)
+15. pino/winston for logging (imp)
+15. ioredis (imp)
+16. bullmq (imp)
+17. fetch/axios (imp)
+18. dotenv
+19. multer (imp)
+20. stripe/razorpay (imp)
+21. -D jest/supertest/vitest (imp)
+22. -D playwright
+23. socket.io (imp)
+24. nodemailer 
+25. date-fns/dayjs
+26. crypto.randomUUID()
+27. nodemon, tsx, ts-node, eslint, prettier, husky, lint-staged
+28. oauth/keycloak
+
+
