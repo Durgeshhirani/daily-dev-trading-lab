@@ -513,5 +513,7 @@ emitter.once("start, () => {});
 26. crypto.randomUUID()
 27. nodemon, tsx, ts-node, eslint, prettier, husky, lint-staged
 28. oauth/keycloak
+29. mongoose
+
 
 

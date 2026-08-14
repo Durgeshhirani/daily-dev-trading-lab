@@ -10,6 +10,7 @@ target confidence level 80%
 5. React: greatfrontend, projects, open source
 6. AI: 
 7. MySQL: sql-practice, leetcode, exercism
+https://leetcode.ca/all/problems.html
 
 # Target levels:
 1. PHP: 80%
@@ -320,3 +321,7 @@ zrok share public --backend-mode web .1
                  Convert to Nest
                         ↓
               Convert DB to PostgreSQL
+
+ls
+
+today: express, node:process, node:path, typescript -D ts-node
