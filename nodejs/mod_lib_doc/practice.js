@@ -1,84 +1,76 @@
-import http from 'node:http'
-import fs from 'node:fs';
-import fsp from 'node:fs/promises';
-import path from 'node:path';
-// import process from 'node:process';
-
 process.loadEnvFile();
+import express from 'express';
+
 const port = process.env.PORT;
-
-const currentDir = process.cwd();
-const documentPath = path.join(currentDir, 'mod_lib_doc', 'prompt.md');
-const writePath = path.join(currentDir, 'mod_lib_doc', 'write.md');
-
-let server = http.createServer(async (req, res) => {
-    try {
-
-        if (req.url == '/download') {
-
-            const file = await fsp.readFile(documentPath)
-            res.writeHead(201, {
-                'Content-Type': 'application/json', 'Content-Disposition':
-                    'attachment; filename="prompts_for_yo.md"'
-            })
-            return res.end(file);
-        }
-
-        res.writeHead(201, {
-            'Content-Type': 'application/json'
-        })
-
-        if (req.url == '/write' && req.method == 'POST') {
-            let body = "";
-            req.on('data', chunk => {
-                body += chunk
-            })
-            req.on('end', async () => {
-                // let oldData = await fsp.readFile(writePath, 'utf8');
-                // let newData = oldData + body;
-                // fsp.writeFile(writePath, newData ?? 'hello', 'utf8');
-                fsp.appendFile(writePath, body ?? 'hello', 'utf8');
-            })
-        }
-        if (req.url == '/delete' && req.method == 'DELETE') {
-            await fsp.access(writePath);
-            await fsp.unlink(writePath);
-            return res.end(JSON.stringify({
-                status: 200,
-                message: "file write.md is deleted"
-            }))
-        }
-        if (req.url == '/stats') {
-            let mydir = path.join(currentDir, 'mod_lib_doc', 'practice.js');
-            let mystats = await fsp.stat(mydir)
-            return res.end(JSON.stringify({
-                status: 200,
-                message: "file/folder stats",
-                path: mydir,
-                data: mystats
-            }))
-        }
-        // from list directory pending
-
-        // const stream = fs.createReadStream(documentPath);
-        // stream.pipe(res);
+console.log(process.env);
 
 
-        res.end(JSON.stringify({
-            status: 200,
-            current_path: process.cwd()
-        }))
-    } catch (err) {
-        res.end(JSON.stringify({
-            status: 500,
-            message: "Something went wrong",
-            error: err
-        }))
+import webRoutes from '../src/routes/webRoutes.js';
+
+let server = express();
+server.use(express.json(
+    {
+        limit: '1mb'
     }
+))
+server.set("name", 'Durgesh');
+server.set("port", process.env.PORT);
+
+server.post('/see', (req, res) => {
+    // res.setHeader('Content-Type', 'application/json')
+    res.json({
+        status: 200,
+        data: req.method,
+        name: server.get('name'),
+        port: server.get('port')
+    })
 });
 
+server.use('/api', webRoutes);
+
+// server.use('/static', express.static(import.meta.dirname));
+
+
+// 404 route handler
+server.use((req, res) => {
+    res.json({
+        status: 404,
+        message: 'can\'t found the route'
+    })
+});
+
+// error handler
+server.use((err, req, res, next) => {
+    res.status(500).json({
+        error: {
+            message: err.message || "Internal Server Error",
+            // Only include stack traces in development environments for security
+            stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
+        }
+    });
+});
 
 server.listen(port, () => {
-    console.log(`running in ${port}`);
+    console.log(`server is running on ${port}`);
 
 })
+
+
+process.on("SIGTERM", () => {
+
+    console.log("SIGTERM received");
+
+    server.close(() => {
+
+        console.log("HTTP server closed");
+
+        process.exit(0);
+    });
+});
+
+process.on("SIGINT", () => {
+
+    console.log("Ctrl+C received");
+
+    process.exitCode = 0;
+});
