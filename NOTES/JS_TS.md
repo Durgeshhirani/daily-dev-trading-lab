@@ -1,3 +1,4 @@
+https://javascript.info/
 # 11 june 2026
 
 ## closures in js ts

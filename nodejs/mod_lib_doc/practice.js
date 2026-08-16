@@ -2,10 +2,10 @@ process.loadEnvFile();
 import express from 'express';
 
 const port = process.env.PORT;
-console.log(process.env);
 
 
 import webRoutes from '../src/routes/webRoutes.js';
+import apiRoutes from '../src/routes/apiRoutes.ts';
 
 let server = express();
 server.use(express.json(
@@ -27,6 +27,7 @@ server.post('/see', (req, res) => {
 });
 
 server.use('/api', webRoutes);
+server.use('/ts', apiRoutes);
 
 // server.use('/static', express.static(import.meta.dirname));
 
@@ -50,27 +51,52 @@ server.use((err, req, res, next) => {
     });
 });
 
-server.listen(port, () => {
+let app = server.listen(port, () => {
     console.log(`server is running on ${port}`);
 
 })
 
 
-process.on("SIGTERM", () => {
+// process.on("SIGTERM", () => {
 
-    console.log("SIGTERM received");
+//     console.log("SIGTERM received");
 
-    server.close(() => {
+//     server.close(() => {
 
-        console.log("HTTP server closed");
+//         console.log("HTTP server closed");
 
+//         process.exit(0);
+//     });
+// });
+
+// process.on("SIGINT", () => {
+
+//     console.log("Ctrl+C received");
+
+//     process.exitCode = 0;
+// });
+
+// Function to handle graceful shutdown
+function gracefulShutdown(signal) {
+    console.log(`\n${signal} received. Starting graceful shutdown...`);
+
+    // 1. Stop accepting new connections
+    app.close(() => {
+        console.log("HTTP server closed.");
+
+        // 2. Safely exit the process now that the event loop is clear
         process.exit(0);
     });
-});
 
-process.on("SIGINT", () => {
+    // 3. Safety Timeout (Force exit if connections hang for too long)
+    setTimeout(() => {
+        console.error("Could not close connections in time, forcefully shutting down");
+        process.exit(1);
+    }, 10000); // 10 seconds
+}
 
-    console.log("Ctrl+C received");
+// Capture Ctrl+C (Terminal)
+process.on("SIGINT", () => gracefulShutdown("SIGINT"));
 
-    process.exitCode = 0;
-});
+// Capture Kill/Heroku/Docker termination signals
+process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));

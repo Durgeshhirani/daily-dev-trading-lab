@@ -1,0 +1,8 @@
+name: enviro
+variables:
+  - name: url
+    value: ""
+    description: ""
+  - name: token
+    value: ""
+    description: ""
