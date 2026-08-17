@@ -1,16 +1,16 @@
 info:
-  name: test
+  name: login
   type: http
-  seq: 1
+  seq: 4
 
 http:
   method: POST
-  url: localhost:3000/users
+  url: http://localhost:3000/api/login
   body:
     type: json
     data: |-
       {
-        "name": "Durgesh"
+        "mobile": "1234561234"
       }
   auth: inherit
 
@@ -19,4 +19,3 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-​

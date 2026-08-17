@@ -1,11 +1,11 @@
 info:
-  name: practice
+  name: laravel
   type: http
-  seq: 3
+  seq: 6
 
 http:
   method: POST
-  url: "{{url}}api/path"
+  url: https://bsbprimedemo.bsbinfotrade.com/api/sellerFaqList
   auth: inherit
 
 settings:

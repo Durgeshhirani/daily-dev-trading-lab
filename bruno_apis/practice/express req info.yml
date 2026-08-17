@@ -1,17 +1,11 @@
 info:
-  name: Untitled
+  name: express req info
   type: http
-  seq: 1
+  seq: 3
 
 http:
   method: POST
-  url: localhost:3000/users
-  body:
-    type: json
-    data: |-
-      {
-        "name": "Durgesh"
-      }
+  url: http://localhost:3000/api/request-info
   auth: inherit
 
 settings:
@@ -19,4 +13,3 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-​

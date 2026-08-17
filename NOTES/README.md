@@ -326,3 +326,6 @@ zrok share public --backend-mode web .1
 ls
 
 today: express, node:process, node:path, typescript -D ts-node
+
+
+autocannon -c 100 -d 60 https://backend.bsbinfotrade.com/

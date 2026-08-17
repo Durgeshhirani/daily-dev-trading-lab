@@ -1,0 +1,24 @@
+info:
+  name: practice
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:3000/api/testquery
+  body:
+    type: json
+    data: |-
+      {
+        "name": "Durgesh",
+        "age": 24
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoicmVmcmVzaCIsImlhdCI6MTc4NjUyOTQyMywiZXhwIjoxNzg2NTI5NDgzfQ.ItB8WZ8LkvgV7f4WL8Lj_MVIHRCqOfo9TkXKppgKVDw
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

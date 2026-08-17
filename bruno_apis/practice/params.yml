@@ -1,0 +1,25 @@
+info:
+  name: params
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:3000/api/testparams/name/durgesh/age/78?fire=ship
+  params:
+    - name: fire
+      value: ship
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "software": "Node"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
