@@ -1,0 +1,15 @@
+info:
+  name: type
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}ts/type"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

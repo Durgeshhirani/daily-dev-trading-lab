@@ -1,7 +1,7 @@
-Create a single, practical JavaScript/TypeScript reference file for {{package}}.
+Create a single, practical JavaScript/TypeScript reference file for pg.
 
 Goal:
-I want a compact "developer cheatsheet" that I can keep beside me while coding. It should cover the most commonly used 20% of {{package}} that handles roughly 80% of real-world usage.
+I want a compact "developer cheatsheet" that I can keep beside me while coding. It should cover the most commonly used 20% of pg that handles roughly 80% of real-world usage.
 
 Requirements:
 
@@ -57,7 +57,7 @@ Requirements:
 10. Make the file self-contained and syntactically valid wherever practical.
     If an example requires external credentials, files, environment variables, or infrastructure, clearly mark those parts.
 
-11. Adapt the structure to {{package}}.
+11. Adapt the structure to pg.
     Do NOT blindly use the same sections for every package.
     For example:
     - HTTP libraries → requests, responses, headers, routing, streams
@@ -67,10 +67,10 @@ Requirements:
     - Frameworks → setup, architecture, routing, middleware, DI, lifecycle
     - Testing libraries → setup, assertions, mocks, fixtures, lifecycle
 
-12. If {{package}} has multiple commonly used APIs/approaches, prioritize the modern/recommended approach and briefly identify older/common alternatives when useful.
+12. If pg has multiple commonly used APIs/approaches, prioritize the modern/recommended approach and briefly identify older/common alternatives when useful.
 
 13. Assume I already understand basic JavaScript.
-    Focus on practical {{package}} usage, not teaching JavaScript itself.
+    Focus on practical pg usage, not teaching JavaScript itself.
 
 14. Target:
     - Node.js backend development

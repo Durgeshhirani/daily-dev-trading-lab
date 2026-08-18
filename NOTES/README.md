@@ -329,3 +329,12 @@ today: express, node:process, node:path, typescript -D ts-node
 
 
 autocannon -c 100 -d 60 https://backend.bsbinfotrade.com/
+
+
+August 2026 Tasks - Durgesh Hirani
+
+1. Tender section APis (completed)
+2. Aisensy code changes (completed)
+3. Services list menu mobile api + admin (completed)
+4. user to user referral (completed)
+5. Transit insurance mobile apis + admin (ongoing)

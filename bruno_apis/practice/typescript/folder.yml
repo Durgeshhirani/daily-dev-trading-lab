@@ -1,0 +1,7 @@
+info:
+  name: typescript
+  type: folder
+  seq: 5
+
+request:
+  auth: inherit

@@ -73,3 +73,10 @@ Code coverage:
 https://web.dev/articles/ta-code-coverage
 
 Testing:
+
+
+# 18 aug 2026
+**TypeScript is JavaScript’s runtime with a compile-time type checker**
+Detecting errors in code without running it is referred to as static checking. Determining what’s an error and what’s not based on the kinds of values being operated on is known as static type checking.
+TypeScript never changes the runtime behavior of JavaScript code. This means that if you move code from JavaScript to TypeScript, it is guaranteed to run the same way, even if TypeScript thinks that the code has type errors.
+You should prefer interface. Use type when you need specific features.
