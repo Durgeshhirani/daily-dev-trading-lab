@@ -338,3 +338,26 @@ August 2026 Tasks - Durgesh Hirani
 3. Services list menu mobile api + admin (completed)
 4. user to user referral (completed)
 5. Transit insurance mobile apis + admin (ongoing)
+
+
+
+Mode A — Coding/library reference
+
+{{package}} = node:fs
+{{package}} = express
+{{package}} = pg
+{{package}} = redis
+{{package}} = jsonwebtoken
+{{package}} = node:path
+{{package}} = TypeScript
+
+Your original prompt is excellent for these.
+
+Mode B — Infrastructure/system reference
+
+{{package}} = Linux
+{{package}} = Nginx
+{{package}} = Apache HTTP Server
+{{package}} = Docker
+{{package}} = Git
+{{package}} = AWS EC2
