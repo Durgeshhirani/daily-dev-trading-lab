@@ -1,3 +1,36 @@
+| Directory          | Purpose                                                                         |
+| ------------------ | ------------------------------------------------------------------------------- |
+| `/`                | Top-level filesystem                                                            |
+| `/bin`             | Essential user commands                                                         |
+| `/sbin`            | Essential system/admin commands                                                 |
+| `/boot`            | Kernel and bootloader files                                                     |
+| `/dev`             | Device files                                                                    |
+| `/etc`             | System/application configuration                                                |
+| `/home`            | Normal users' home directories                                                  |
+| `/root`            | Root user's home directory                                                      |
+| `/lib`, `/lib64`   | System libraries                                                                |
+| `/opt`             | Optional/third-party software                                                   |
+| `/proc`            | Virtual filesystem containing process/kernel information                        |
+| `/run`             | Runtime state of services/processes                                             |
+| `/srv`             | Data served by system services                                                  |
+| `/sys`             | Kernel/device information                                                       |
+| `/tmp`             | Temporary files                                                                 |
+| `/usr`             | Most installed programs/libraries                                               |
+| `/var`             | Variable data: logs, databases, caches, websites, etc.                          |
+| `/mnt`             | Temporary mount points                                                          |
+| `/media`           | Removable media                                                                 |
+| `/lost+found`      | Files recovered by filesystem checks                                            |
+| `/backup`          | Server-specific backup directory                                                |
+| `/scripts`         | Server-specific scripts                                                         |
+| `/backend`         | **Not a standard Linux directory**; likely created by your hosting/server setup |
+| `/error_log`       | **Not standard**; likely a server/application log                               |
+| `/razor-agent.log` | Log created by a server/monitoring/security agent                               |
+| `/quota.user`      | Filesystem quota information                                                    |
+| `/nonexistent`     | Usually a special-purpose empty/non-login user's home                           |
+
+
+
+
 // ============================================================
 // LINUX & DEVOPS
 // Practical Backend / Production / Interview Reference
